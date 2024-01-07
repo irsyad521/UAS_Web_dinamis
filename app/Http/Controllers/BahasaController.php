@@ -41,7 +41,7 @@ class BahasaController extends Controller
     {
         // Validasi data
         $validator = Validator::make($request->all(), [
-            'id' => ['required', 'string', 'max:255', Rule::unique('bahasas', 'id')],
+            'id' => ['required', 'string', 'max:255', Rule::unique('bahasa', 'id')],
             'nama' => 'required|string|max:255',
             'category_id' => 'required|integer',
             'sinopsis' => 'required|string',
@@ -51,7 +51,7 @@ class BahasaController extends Controller
         ]);
         // Jika validasi gagal, kembali ke halaman input dengan pesan kesalahan
         if ($validator->fails()) {
-            return redirect('bahasa/create')
+            return redirect('bahasas/create')
                 ->withErrors($validator)
                 ->withInput();
         }
