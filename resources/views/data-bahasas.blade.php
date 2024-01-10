@@ -1,6 +1,6 @@
 @extends('layout.template')
 
-@section('title', 'Data Movie')
+@section('title', 'Data Bahasa Pemoggraman')
 
 @section('content')
 
